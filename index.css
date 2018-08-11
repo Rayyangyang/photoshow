@@ -1,0 +1,141 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+html,body,.wrapper{
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+}
+.wrapper ul{
+	width: 80%;
+	height: 80%;
+	margin: 50px auto;
+	position: relative;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	/*overflow:hidden;*/
+}
+.wrapper ul li{
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+}
+.bgPic{
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	background-size: cover;
+	background-position: center center;
+}
+.wrapper .item:nth-of-type(1) .inner .bgPic{
+	background-image: url(./img/1.jpg);
+}
+.wrapper .item:nth-of-type(2) .inner .bgPic{
+	background-image: url(./img/2.jpg);
+}
+.wrapper .item:nth-of-type(3) .inner .bgPic{
+	background-image: url(./img/3.jpg);
+}
+.wrapper .item:nth-of-type(4) .inner .bgPic{
+	background-image: url(./img/4.jpg);
+}
+.wrapper .item:nth-of-type(5) .inner .bgPic{
+	background-image: url(./img/5.jpg);
+}
+.wrapper .item:nth-of-type(6) .inner .bgPic{
+	background-image: url(./img/6.jpg);
+}
+.wrapper ul .item{
+	width: 16%;
+	height: 100%;
+	position: relative;
+	cursor: pointer;
+	opacity: 0.7;
+	transition: width 0.5s linear, height 0.5s linear 0.5s;
+}
+.title{
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	opacity: 1;
+	transition: opacity 0.5s linear 1s;
+}
+.item:hover{
+	opacity: 1;
+	transition: opacity 0.2s linear;
+}
+.item:hover .title{
+	font-size: 25px;
+	transition: font-size 0.2s linear;
+}
+.init .item .inner{
+	transform:translateY(100%);
+}
+.item .inner{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition: transform 1s linear;
+}
+.item:nth-of-type(1) .inner{
+	transition-delay: 0.1s
+}
+.item:nth-of-type(2) .inner{
+	transition-delay: 0.3s
+}
+.item:nth-of-type(3) .inner{
+	transition-delay: 0.6s
+}
+.item:nth-of-type(4) .inner{
+	transition-delay: 0.9s
+}
+.item:nth-of-type(5) .inner{
+	transition-delay: 1.2s
+}
+.item:nth-of-type(6) .inner{
+	transition-delay: 1.5s
+}
+.wrapper-active{
+	width: 100%;
+	height: 100%;
+}
+.wrapper-active ul .item-active{
+	width: 100%;
+	height: 100%;
+}
+.wrapper-active li:not(.item-active){
+	width: 0%;
+	height: 0%;
+}
+.wrapper-active .content .item{
+	opacity:1;
+	transition: width 0.5s linear 0.5s, height 0.5s linear;
+}
+.wrapper-active .item .title{
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+.wrapper .item .dir div{
+	position: absolute;
+	top: 20px;
+	opacity: 0;
+	color: #fff;
+}
+.wrapper .item .dir .demo{
+	left:20px;
+}
+.wrapper .item .dir .close{
+	right:20px;
+	font-size: 20px;
+}
+.wrapper-active .item .dir div{
+	opacity: 1;
+	transition: opacity 0.5s linear 0.5s;
+}
+.wrapper-active li:not(.item-active) .dir div{
+	opacity: 0;
+}
